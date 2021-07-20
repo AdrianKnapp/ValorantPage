@@ -1,0 +1,39 @@
+$font-family: 'Montserrat', sans-serif;
+$soft-background-color: #0F1422;
+$soft-white-text-color: #EBE8E1;
+$red-text-color: #DC3D4B;
+$background-color: #070A11;
+$soft-border-color: #3F1215;
+
+@font-face {
+  font-family: 'Valorant';
+  src: url('../fonts/Valorant-font.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $soft-white-text-color;
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 10px;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@import 'header';
+@import 'first-block';
+@import 'footer';
