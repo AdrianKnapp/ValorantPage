@@ -231,6 +231,19 @@ main {
         align-items: center;
         font-size: 22px;
         transition: .3s;
+        position: relative;
+        padding-left: 25px;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          background-color: $red-text-color;
+          left: 0;
+          top: 7px;
+        }
       }
 
       p {
@@ -269,6 +282,19 @@ main {
         align-items: center;
         font-size: 22px;
         transition: .3s;
+        position: relative;
+        padding-left: 25px;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          background-color: $red-text-color;
+          left: 0;
+          top: 7px;
+        }
       }
 
       p {

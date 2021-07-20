@@ -380,6 +380,19 @@ main #second-block .text-block p {
   font-size: 22px;
   -webkit-transition: .3s;
   transition: .3s;
+  position: relative;
+  padding-left: 25px;
+}
+
+#third-block .content-box-img-left .text-block h3::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #DC3D4B;
+  left: 0;
+  top: 7px;
 }
 
 #third-block .content-box-img-left .text-block p {
@@ -441,6 +454,19 @@ main #second-block .text-block p {
   font-size: 22px;
   -webkit-transition: .3s;
   transition: .3s;
+  position: relative;
+  padding-left: 25px;
+}
+
+#third-block .content-box-img-right .text-block h3::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #DC3D4B;
+  left: 0;
+  top: 7px;
 }
 
 #third-block .content-box-img-right .text-block p {
