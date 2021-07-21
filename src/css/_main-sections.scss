@@ -1,0 +1,432 @@
+.content-box-default {
+  width: 100%;
+  background-color: $soft-background-color;
+  padding: 30px;
+  border: 1px solid $soft-border-color;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+
+  #page-title {
+    @extend .flex-center;
+    width: 100%;
+
+    .container {
+      @extend .flex-center;
+    }
+  }
+
+  h1 {
+    margin: 30px 0;
+    text-align: end;
+    font-size: 50px;
+    font-weight: 600;
+
+    .span1 {
+      font-size: 0.6em;
+      font-weight: 300;
+    }
+
+    .span2 {
+      color: $red-text-color;
+      font-family: 'Valorant';
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+  }
+}
+
+#first-block {
+  width: 100%;
+  @extend .flex-center;
+  flex-direction: column;
+
+  .content-box {
+    @extend .content-box-default;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    grid-template-areas: "img text";
+
+    .img-slide-box {
+      width: 100%;
+      height: 400px;
+      overflow-y: scroll;
+      background-color: $background-color;
+      display: flex;
+      flex-direction: column;
+
+      &::-webkit-scrollbar {
+        width: 18px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $red-text-color;
+        border-left: 3px solid $soft-background-color;
+        border-right: 3px solid $soft-background-color;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $soft-background-color;
+      }
+    }
+
+    .img-slide {
+      grid-column: 1/2;
+      grid-area: img;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+
+      .img1 {
+        width: 100%;
+        height: 400px;
+        background-image: url('../images/jett.jpg');
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+
+      .img2 {
+        width: 100%;
+        height: 400px;
+        background-image: url('../images/phoenix.jpg');
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+
+      .img3 {
+        width: 100%;
+        height: 400px;
+        background-image: url('../images/reyna.jpg');
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+      }
+    }
+
+    .content-text-block {
+      grid-column: 2/3;
+      grid-area: text;
+      position: relative;
+      padding-left: 30px;
+      
+
+      .item1 {
+        h3 {
+          font-family: 'Valorant';
+          font-size: 2em;
+          font-weight: 300;
+          position: relative;
+          padding-left: 30px;
+  
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background-color: #85dbf0;
+            left: 0;
+            top: 10px;
+          }
+        }
+      }
+
+      .item2 {
+        h3 {
+          font-family: 'Valorant';
+          font-size: 2em;
+          font-weight: 300;
+          position: relative;
+          padding-left: 30px;
+  
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background-color: #ffbb44;
+            left: 0;
+            top: 10px;
+          }
+        }
+      }
+
+      .item3 {
+        h3 {
+          font-family: 'Valorant';
+          font-size: 2em;
+          font-weight: 300;
+          position: relative;
+          padding-left: 30px;
+  
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background-color: #c85cfd;            ;
+            left: 0;
+            top: 10px;
+          }
+        }
+      }
+
+      .content-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        display: none;
+        transition: .5s;
+
+        &.active {
+          display: block;
+          animation: textSlideRight .3s forwards;
+        }
+      }
+
+      @keyframes textSlideRight {
+        from {
+          opacity: 0;
+          transform: translate3d(-30px, 0, 0);
+        }
+
+        to {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      p {
+        margin: 10px 0;
+        font-size: 1em !important;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+#second-block {
+  width: 100%;
+  @extend .flex-center;
+  margin-top: 85px;
+  transition: .3s;
+
+  h2 {
+    font-family: 'Valorant';
+    font-size: 2.5em;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+
+  .content-box {
+    @extend .content-box-default;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+    margin-bottom: 30px;
+
+    h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.1em;
+      font-weight: 500;
+      transition: .3s;
+      cursor: pointer;
+      i {
+        margin-left: 5px;
+        transition: .3s;
+        transform: rotate(90deg);
+      }
+
+      &.active{
+        color : $red-text-color;
+      }
+    }
+
+    p {
+      font-size: 0.9em;
+      transition: .3s;
+      max-height: 1000px;
+      display: none;
+      font-weight: 300;
+    }
+
+    p.active {
+      display: block;
+      animation: accordion .3s forwards;
+      ;
+    }
+
+    @keyframes accordion {
+      from {
+        opacity: 0;
+        max-height: 0;
+        transform: translate3d(0, -20px, 0);
+      }
+
+      to {
+        display: block;
+        opacity: 1;
+        max-height: 1000px;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}
+
+
+#third-block {
+  width: 100%;
+  @extend .flex-center;
+  margin-top: 85px;
+
+  .content-box {
+    @extend .content-box-default;
+    margin-bottom: 30px;
+  }
+
+  .content-box-img-left {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: "img text";
+    box-sizing: border-box;
+
+    .img-content {
+      width: 100%;
+      grid-column: 1/2;
+      grid-area: img;
+      background-image: url('../images/mira.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      box-sizing: border-box;
+    }
+
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25px;
+      grid-column: 2/3;
+      grid-area: text;
+      padding-left: 30px;
+      box-sizing: border-box;
+
+      h3 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1em;
+        transition: .3s;
+        position: relative;
+        padding-left: 25px;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: $red-text-color;
+          left: 0;
+          top: 6px;
+        }
+      }
+
+      p {
+        box-sizing: border-box;
+        font-size: 0.9em;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .content-box-img-right {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: "text img";
+
+    .img-content {
+      width: 100%;
+      grid-column: 2/3;
+      grid-area: img;
+      background-image: url('../images/movimentacao.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+    }
+
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25px;
+      grid-column: 1/2;
+      grid-area: text;
+      padding-right: 30px;
+
+      h3 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1em;
+        transition: .3s;
+        position: relative;
+        padding-left: 25px;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: $red-text-color;
+          left: 0;
+          top: 6px;
+        }
+      }
+
+      p {
+        font-size: 0.9em;
+        font-weight: 300;
+      }
+    }
+  }
+
+  h2 {
+    font-family: 'Valorant';
+    font-size: 2.5em;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+}
+
+.js-section {
+  opacity: 0;
+  transition: .5s;
+  transform: translate3d(-30px, 0, 0);
+
+  &.active{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

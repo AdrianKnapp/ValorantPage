@@ -36,10 +36,11 @@ main {
       font-size: 1.1em;
     }
   }
-
+}
   #first-block {
     width: 100%;
     @extend .flex-center;
+    flex-direction: column;
 
     .content-box {
       @extend .content-box-default;
@@ -60,12 +61,12 @@ main {
 
         &::-webkit-scrollbar-thumb {
           background: $red-text-color;
-          border-left: 2px solid $background-color;
-          border-right: 2px solid $background-color;
+          border-left: 3px solid $soft-background-color;
+          border-right: 3px solid $soft-background-color;
         }
 
         &::-webkit-scrollbar-track {
-          background: $background-color;
+          background: $soft-background-color;
         }
       }
 
@@ -138,6 +139,24 @@ main {
           display: flex;
           flex-direction: column;
           justify-content: start;
+          display: none;
+          transition: .5s;
+
+          &.active {
+            display: block;
+            animation: textSlideRight .3s forwards;
+          }
+        }
+
+        @keyframes textSlideRight {
+          from {
+            opacity: 0;
+            transform: translate3d(-30px, 0, 0);
+          }
+          to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+          }
         }
 
         p {
@@ -152,7 +171,7 @@ main {
     width: 100%;
     @extend .flex-center;
     margin-top: 85px;
-
+    transition: .3s;
     h2 {
       font-family: 'Valorant';
       font-size: 50px;
@@ -162,12 +181,16 @@ main {
 
     .content-box {
       @extend .content-box-default;
+      padding: 0 30px;
+      display: flex;
+      flex-direction: column;
     }
 
     .text-block {
       display: flex;
       flex-direction: column;
-      margin-bottom: 25px;
+      transition: .3s;
+      margin: 30px 0;
 
       h3 {
         display: flex;
@@ -186,10 +209,33 @@ main {
 
       p {
         font-size: 18px;
+        transition: .3s;
+        max-height: 1000px;
+        display: none;
+        
+      }
+
+      p.active{
+        display: block;
+        animation: accordion .3s forwards;;
+      }
+
+      @keyframes accordion {
+        from {
+          opacity: 0;
+          max-height: 0;
+          transform: translate3d(0, -20px, 0);
+        } 
+        to {
+          display: block;
+          opacity: 1;
+          max-height: 1000px;
+          transform: translate3d(0, 0, 0);
+        }
       }
     }
   }
-}
+
 
 #third-block {
   width: 100%;

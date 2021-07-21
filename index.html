@@ -1,131 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Valorant duelistas </title>
+  <title> Duelistas </title>
   <link rel="stylesheet" href="src/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="src/images/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="src/images/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="src/images/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="src/images/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="src/images/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="src/images/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="src/images/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="src/images/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="src/images/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="src/images/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="src/images/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/images/icons/favicon-16x16.png">
+  <link rel="manifest" href="src/images/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="src/images/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
-  <header>
+  <header id='header-page'>
     <div class="container">
       <ul>
         <li>
-          <a href="">
+          <a href="#first-block" class="first-item-menu active">
             Início
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#second-block" class="second-item-menu">
             F.A.Q
           </a>
         </li>
-        <li><a href="">
-          Estilo
-        </a></li>
+        <li><a href="#third-block" class="third-item-menu">
+            Estilo
+          </a></li>
       </ul>
     </div>
   </header>
-  <main>
-    <section id="page-title">
-      <div class="container">
-        <h1>
-          DUELISTAS <span class="span1">FROM</span> <br> <span class="span2">VALORANT</span>
-        </h1>
-      </div>
-    </section>
+  <main class='js-section first-section js-inicio'>
     <section id="first-block">
+      <header id="page-title">
+        <div class="container">
+          <h1>
+            DUELISTAS <span class="span1">FROM</span> <br> <span class="span2">VALORANT</span>
+          </h1>
+        </div>
+      </header>
       <div class="container">
         <div class="content-box">
           <div class="img-slide-box">
             <div class="img-slide">
-              <div class="img1" alt=""> </div>
-              <div class="img2" alt=""> </div>
-              <div class="img3" alt=""> </div>
+              <div class="img1 js-banner-img" alt=""> </div>
+              <div class="img2 js-banner-img" alt=""> </div>
+              <div class="img3 js-banner-img" alt=""> </div>
             </div>
           </div>
           <div class="content-text-block">
-            <div class="content-text">
+            <div class="content-text  js-banner-text active item1">
               <h3> JETT </h3>
               <p>
-                Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes mesmo que eles percebam quem ou o que os atingiu.
+                Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite
+                que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes
+                mesmo que eles percebam quem ou o que os atingiu.
+              </p>
+            </div>
+            <div class="content-text  js-banner-text item2">
+              <h3> PHOENIX </h3>
+              <p>
+                Chegando com tudo diretamente do Reino Unido, o poder estelar de Phoenix reluz em seu estilo de luta, incendiando o campo de batalha com luz e estilo. Tendo ajuda ou não, ele entra na luta como e quando achar que deve.
+              </p>
+            </div>
+            <div class="content-text  js-banner-text item3">
+              <h3> REYNA </h3>
+              <p>
+                Criada no coração do México, Reyna domina o combate individual, destacando-se a cada abate efetuado. Sua capacidade só é limitada por sua própria perícia, tornando-a bastante dependente de desempenho.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="second-block">
-      <div class="container">
-        <h2> F.A.Q </h2>
-        <div class="content-box">
-          <div class="text-block">
-            <h3> 
-              Por que escolher um duelista ?
-              <i class="drodown material-icons">chevron_right</i>
-            </h3>
-            <p> 
-              Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes mesmo que eles percebam quem ou o que os atingiu.
-            </p>
-          </div>
-          <div class="text-block">
-            <h3> 
-              Por que escolher um duelista ?
-              <i class="drodown material-icons">chevron_right</i>
-            </h3>
-            <p> 
-              Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes mesmo que eles percebam quem ou o que os atingiu.
-            </p>
-          </div>
-          <div class="text-block">
-            <h3> 
-              Por que escolher um duelista ?
-              <i class="drodown material-icons">chevron_right</i>
-            </h3>
-            <p> 
-              Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes mesmo que eles percebam quem ou o que os atingiu.
-            </p>
-          </div>
-          <div class="text-block">
-            <h3> 
-              Por que escolher um duelista ?
-              <i class="drodown material-icons">chevron_right</i>
-            </h3>
-            <p> 
-              Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes mesmo que eles percebam quem ou o que os atingiu.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="third-block">
-      <div class="container">
-        <h2> Estilo duelista </h2>
-        <div class="content-box content-box-img-left">
-          <div class='img-content' alt=""></div>
-          <div class="text-block">
-            <h3> Mira afiada </h3>
-            <p> Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes mesmo que eles percebam quem ou o que os atingiu. </p>
-          </div>
-        </div>
-        <div class="content-box content-box-img-right">
-          <div class='img-content' alt=""></div>
-          <div class="text-block">
-            <h3> Movimentação afiada </h3>
-            <p> Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes mesmo que eles percebam quem ou o que os atingiu. </p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
+  <section class='js-section second-section js-faq' id="second-block">
+    <div class="container">
+      <h2> F.A.Q </h2>
+      <div class="content-box">
+        <div class="text-block js-accordion-text">
+          <h3>
+            Por que escolher um duelista?
+            <i class="drodown material-icons">chevron_right</i>
+          </h3>
+          <p class="active">
+            Os Duelistas são mais bem aproveitados por jogadores mais ousados, com reflexos rápidos e capacidade de tomar decisões rápidas. Isso se dá justamente pelo posicionamento avançado nas zonas de combate, o que deixa os Agentes expostos ao perigo.
+          </p>
+        </div>
+        <div class="text-block js-accordion-text">
+          <h3>
+            Como escolher meu main?
+            <i class="drodown material-icons">chevron_right</i>
+          </h3>
+          <p>
+            Procure primeiro qual personagem que você mais se diverte, é o ponto mais importante, pois você vai ter que floodar o personagem para jogar com maestria. Procure uma função e algo que você faça bem para determinar quem vai mandar no seu jogo.
+          </p>
+        </div>
+        <div class="text-block js-accordion-text">
+          <h3>
+            Qual o melhor duelista?
+            <i class="drodown material-icons">chevron_right</i>
+          </h3>
+          <p>
+              Reyna, Phoenix ou Jett. Um flash de Phoenix ou Reyna é perfeito para isso. E ambos os duelistas podem armar vários abates com suas ultimates, facilmente mudando o rumo de uma luta. Embora Jett não tenha um flash, seus avanços e potencial de operações fornecem muito para sua equipe.
+          </p>
+        </div>
+        <div class="text-block js-accordion-text">
+          <h3>
+            Qual o melhor personagem do Valorant?
+            <i class="drodown material-icons">chevron_right</i>
+          </h3>
+          <p>
+            Raze. Raze é a representante brasileira no Valorant! Trata-se de uma agente predominantemente ofensiva, pois a maioria de suas habilidades tem natureza explosiva. Seu poder de fogo é ótimo para a linha de frente de qualquer composição.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='js-section third-section js-estilo' id="third-block">
+    <div class="container">
+      <h2> Estilo duelista </h2>
+      <div class="content-box content-box-img-left">
+        <div class='img-content' alt=""></div>
+        <div class="text-block">
+          <h3> Mira afiada </h3>
+          <p> Jogadores veteranos de tiro em primeira pessoa que se prezam saberão que o primeiro passo para dominar um jogo de tiro competitivo é mexer nas configurações. Embora a sua sensibilidade seja a chave para clicar nas cabeças, a mira que você usa também é, e trocá-la pode ser o segredo do sucesso. </p>
+        </div>
+      </div>
+      <div class="content-box content-box-img-right">
+        <div class='img-content' alt=""></div>
+        <div class="text-block">
+          <h3> Movimentação treinada </h3>
+          <p> Sua movimentação deve estar em dia, ter uma noção tri-dimencional do seu personagem muito nessas horas. Um bom treino, é o Treino de Desnível, vai melhorar sua performance e não deixar que sua mira fique viciada apenas no eixo horizontal. No treino convencional sem estar em cima de uma caixa vai fazer sua mão movimentar para direita e para esquerda, mas movimentar muito pouco para cima e para baixo.. </p>
+        </div>
+      </div>
+    </div>
+  </section>
   <footer>
-    Made by <a href="https://flowpage.com/adrianknapp"> Adrian Knapp </a>
+    Made by <a href="https://flowpage.com/adrianknapp" target="blank_"> Adrian Knapp </a>
   </footer>
 
 
@@ -133,4 +169,5 @@
 
   <script src="src/js/script.js"></script>
 </body>
+
 </html>
