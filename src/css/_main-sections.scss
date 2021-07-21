@@ -192,7 +192,7 @@ main {
 
         &.active {
           display: block;
-          animation: textSlideRight .3s forwards;
+          animation: textSlideRight .5s forwards;
         }
       }
 
@@ -408,6 +408,7 @@ main {
       p {
         font-size: 0.9em;
         font-weight: 300;
+        font-family: $font-family;
       }
     }
   }

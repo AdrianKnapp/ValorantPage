@@ -3,6 +3,21 @@ function initBannerSystem() {
   const bannerTexts = document.querySelectorAll('.js-banner-text');
 
   bannerImages.forEach((img, index) => {
+    img.addEventListener("touchstart", () => {
+      activeTexts(index);
+    });
+    img.addEventListener("touchend", () => {
+      activeTexts(index);
+    });
+    img.addEventListener("touchcancel", () => {
+      activeTexts(index);
+    });
+    img.addEventListener("touchleave", () => {
+      activeTexts(index);
+    });
+    img.addEventListener("touchmove", () => {
+      activeTexts(index);
+    });
     img.addEventListener('click', () => {
       activeTexts(index);
     });
@@ -54,29 +69,34 @@ function menuScrollEvent() {
   const secondItemMenu = document.querySelector('.second-item-menu')
   const thirdItemMenu = document.querySelector('.third-item-menu')
 
+
   const firstSectionTop = firstSection.getBoundingClientRect().top;
   const secondSectionTop = secondSection.getBoundingClientRect().top;
   const thirdSectionTop = thirdSection.getBoundingClientRect().top;
 
-  const windowCutSize1 = firstSectionTop - window.innerHeight * 0.3;
-  const windowCutSize2 = secondSectionTop - window.innerHeight * 0.3;
-  const windowCutSize3 = thirdSectionTop - window.innerHeight * 0.3;
+  const windowCutSize1 = firstSectionTop - window.innerHeight * 0.2;
+  const windowCutSize2 = secondSectionTop - window.innerHeight * 0.2;
+  const windowCutSize3 = thirdSectionTop - window.innerHeight * 0.2;
 
   if (windowCutSize1 < 0 && windowCutSize2 > 0) {
     secondItemMenu.classList.remove('active');
     thirdItemMenu.classList.remove('active');
     firstItemMenu.classList.add('active');
   }
-  if (windowCutSize2 < 0 && windowCutSize3 > 0) {
+   if (windowCutSize2 < 0 && windowCutSize3 > 0) {
     firstItemMenu.classList.remove('active');
     thirdItemMenu.classList.remove('active');
     secondItemMenu.classList.add('active');
-  }
+
+  } 
   if (windowCutSize3 < 0) {
+   
+
     firstItemMenu.classList.remove('active');
     secondItemMenu.classList.remove('active');
     thirdItemMenu.classList.add('active');
   }
+
 }
 window.addEventListener('scroll', menuScrollEvent);
 
@@ -115,10 +135,8 @@ function initScrollSlide() {
       const isSectionVisible = (sectionTop - windowMetade) < 0;
 
       if (isSectionVisible) {
-        console.log("Ativo");
         section.classList.add('active');
       } else {
-        console.log("Desativado");
         section.classList.remove('active');
       }
     })
@@ -129,3 +147,15 @@ function initScrollSlide() {
   window.addEventListener('scroll', animaScroll);
 }
 initScrollSlide();
+
+
+function mobileDeviceRemoveHoverEffect() {
+  const pageLinks = document.querySelectorAll('#header-page a');
+  const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+  if (isMobile) {
+    pageLinks.forEach((link, index) => {
+      link.classList.remove('hover-effect');
+    });
+  }
+}
+mobileDeviceRemoveHoverEffect();

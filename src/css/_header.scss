@@ -39,10 +39,6 @@
         position: relative;
         padding: 0 20px;
 
-        &:hover {
-          color: $red-text-color;
-        }
-
         &::after {
           content: '';
           width: 100%;
@@ -57,19 +53,24 @@
           transition: 0.2s;
         }
 
+        &.active {
+          color: $red-text-color !important;
+          &::after{
+            transform: translateX(0) !important;
+            z-index: 3001 !important;
+            opacity: 1 !important;
+          }
+        }
+      }
+      .hover-effect{
+        &:hover {
+          color: $red-text-color;
+        }
+
         &:hover:after{
           transform: translateX(0);
           z-index: 3001;
           opacity: 1;
-        }
-
-        &.active {
-          color: $red-text-color;
-          &::after{
-            transform: translateX(0);
-            z-index: 3001;
-            opacity: 1;
-          }
         }
       }
     }

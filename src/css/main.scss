@@ -11,6 +11,7 @@ $soft-border-color: #222838;
   src: url('../fonts/Valorant-font.ttf');
 }
 
+
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /*pode ser transparent também*/
@@ -337,6 +338,18 @@ h6 {
       }
       
     }
+
+    @keyframes textSlideRight {
+      from {
+        opacity: 0;
+        transform: translate3d(-15px, 0, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
 
   #second-block {
@@ -432,7 +445,7 @@ h6 {
   #second-block {
     .text-block {
       & i{
-        font-size: 15px
+        font-size: 15px;
       }
     }
   }

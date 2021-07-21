@@ -110,10 +110,6 @@ h6 {
   padding: 0 20px;
 }
 
-#header-page ul li a:hover {
-  color: #DC3D4B;
-}
-
 #header-page ul li a::after {
   content: '';
   width: 100%;
@@ -130,18 +126,22 @@ h6 {
   transition: 0.2s;
 }
 
-#header-page ul li a:hover:after {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  z-index: 3001;
-  opacity: 1;
-}
-
 #header-page ul li a.active {
-  color: #DC3D4B;
+  color: #DC3D4B !important;
 }
 
 #header-page ul li a.active::after {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+  z-index: 3001 !important;
+  opacity: 1 !important;
+}
+
+#header-page ul li .hover-effect:hover {
+  color: #DC3D4B;
+}
+
+#header-page ul li .hover-effect:hover:after {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   z-index: 3001;
@@ -362,8 +362,8 @@ main h1 .span2 {
 
 #first-block .content-box .content-text-block .content-text.active {
   display: block;
-  -webkit-animation: textSlideRight .3s forwards;
-          animation: textSlideRight .3s forwards;
+  -webkit-animation: textSlideRight .5s forwards;
+          animation: textSlideRight .5s forwards;
 }
 
 @-webkit-keyframes textSlideRight {
@@ -673,6 +673,7 @@ main h1 .span2 {
 #third-block .content-box-img-right .text-block p {
   font-size: 0.9em;
   font-weight: 300;
+  font-family: "Montserrat", sans-serif;
 }
 
 #third-block h2 {
@@ -700,14 +701,11 @@ footer {
   width: 100%;
   height: 50px;
   color: #818181;
-  background-color: #0F1422;
-  border-top: 1px solid #222838;
-  margin-top: 30px;
 }
 
 footer a {
   margin-left: 5px;
-  color: #818181;
+  color: #9b9b9b;
 }
 
 @media (max-width: 1100px) {
@@ -907,6 +905,30 @@ footer a {
   }
   #first-block .content-box .img-slide-box .img-slide .img1, #first-block .content-box .img-slide-box .img-slide .img2, #first-block .content-box .img-slide-box .img-slide .img3 {
     height: 250px;
+  }
+  @-webkit-keyframes textSlideRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-15px, 0, 0);
+              transform: translate3d(-15px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+  }
+  @keyframes textSlideRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-15px, 0, 0);
+              transform: translate3d(-15px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
   }
   #second-block {
     margin-top: 50px;

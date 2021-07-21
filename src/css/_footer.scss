@@ -3,12 +3,9 @@ footer {
   height: 50px;
   color: #818181;
   @extend .flex-center;
-  background-color: $soft-background-color;
-  border-top: 1px solid $soft-border-color;
-  margin-top: 30px;
 
   a{
     margin-left: 5px;
-    color: #818181;
+    color:  lighten( #818181, 10%);
   }
 }
