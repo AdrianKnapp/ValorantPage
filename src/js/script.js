@@ -74,9 +74,9 @@ function menuScrollEvent() {
   const secondSectionTop = secondSection.getBoundingClientRect().top;
   const thirdSectionTop = thirdSection.getBoundingClientRect().top;
 
-  const windowCutSize1 = firstSectionTop - window.innerHeight * 0.2;
-  const windowCutSize2 = secondSectionTop - window.innerHeight * 0.2;
-  const windowCutSize3 = thirdSectionTop - window.innerHeight * 0.2;
+  const windowCutSize1 = firstSectionTop - window.innerHeight * 0.4;
+  const windowCutSize2 = secondSectionTop - window.innerHeight * 0.4;
+  const windowCutSize3 = thirdSectionTop - window.innerHeight * 0.4;
 
   if (windowCutSize1 < 0 && windowCutSize2 > 0) {
     secondItemMenu.classList.remove('active');
