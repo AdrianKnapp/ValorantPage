@@ -66,9 +66,8 @@ function menuScrollEvent() {
   const thirdSection = document.querySelector('.third-section');
 
   const firstItemMenu = document.querySelector('.first-item-menu');
-  const secondItemMenu = document.querySelector('.second-item-menu')
-  const thirdItemMenu = document.querySelector('.third-item-menu')
-
+  const secondItemMenu = document.querySelector('.second-item-menu');
+  const thirdItemMenu = document.querySelector('.third-item-menu');
 
   const firstSectionTop = firstSection.getBoundingClientRect().top;
   const secondSectionTop = secondSection.getBoundingClientRect().top;
