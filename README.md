@@ -1,2 +1,2 @@
 ### Try yourself 
-https://adrianknapp.github.io/ValorantPage/
+https://adrianknapp.github.io/valorant-page/
